@@ -1,6 +1,7 @@
 package academit.java.OOP;
 
 import java.security.PublicKey;
+import java.time.LocalDate;
 
 public class Person {
     private String name;
@@ -69,11 +70,18 @@ public class Person {
     public void setAge(int age) {
         if (age != 0) {
             this.age = age;
-            System.out.println("Год рождения был изменён");
+            System.out.println("Возраст был изменён");
         }
         else {
-            System.out.println("Год рождения не был изменён, передан пустой год");
+            System.out.println("Возраст не был изменён, передан пустой год");
         }
+    }
+
+    public int getYearOfBirth() {
+        LocalDate date = LocalDate.now();
+//        int yearbirth = date.getYear() - age;
+//        return yearbirth;
+        return date.getYear() - age;
     }
 
     @Override

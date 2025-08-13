@@ -5,7 +5,7 @@ public class Main_Person {
         String name = "Ivan";
         String middleName = "Ivanovich";
         String familyName = "Ivanov";
-        int age = 2002;
+        int age = 54;
 
         Person person = new Person(name, middleName, familyName, age);
         System.out.println("toString:");
@@ -15,8 +15,9 @@ public class Main_Person {
         person.setName("");
         System.out.println("Новое имя человека: " + person.getName());
 
-        System.out.println("Год рождения человека: " + person.getAge());
-        person.setAge(2001);
-        System.out.println("Новый год рождения человека: " + person.getAge());
+        System.out.println("Возраст человека: " + person.getAge());
+        person.setAge(55);
+        System.out.println("Новый возраст человека: " + person.getAge());
+        System.out.println("Год рождения человека: " + person.getYearOfBirth());
     }
 }
