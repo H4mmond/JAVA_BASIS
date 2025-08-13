@@ -6,32 +6,22 @@ public class ThirdExercise {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите целое число: ");
-        int num = scanner.nextInt();
-        int numodd = num;
-        int nummax = num;
+        int originnum = scanner.nextInt();
+        int num = Math.abs(originnum);
         int sum = 0;
+        int sumodd = 0;
+        int modmax = 0;
 
         while (num > 0) {
+            int check = num % 10;
+            if (!(check % 2 == 0)) {
+                sumodd += check;
+            }
+            if (modmax < check) {
+                modmax = check;
+            }
             sum += num % 10;
             num /= 10;
-        }
-
-        int sumodd = 0;
-        while (numodd > 0) {
-            int fcheck = numodd % 10;
-            if (!(fcheck % 2 == 0)) {
-                sumodd += fcheck;
-            }
-            numodd /= 10;
-        }
-
-        int modmax = 0;
-        while (nummax > 0) {
-            int scheck = nummax % 10;
-            if (modmax < scheck) {
-                modmax = scheck;
-            }
-            nummax /= 10;
         }
 
         System.out.println("Сумма цифр числа: " + sum);

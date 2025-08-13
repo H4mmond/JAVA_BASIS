@@ -15,27 +15,23 @@ public class FirstExercise {
         System.out.println("Введите второе число: ");
         int b = scanner.nextInt();
 
-        int numeven = 0;
+        int sum = 0;
+        int num = 0;
         int sumeven = 0;
-        for (int i = a; i <= b; ++i) {
-            if (i % 2 == 0) {
-                sumeven += i;
+        int numeven = 0;
+        while (a <= b) {
+            if (a % 2 == 0) {
+                sumeven += a;
                 ++numeven;
             }
-        }
-
-        int num = 0;
-        int sum = 0;
-        while (a <= b) {
             sum += a;
             ++a;
             ++num;
         }
 
-        double avgeven = (double) sumeven / numeven;
         double avg = (double) sum / num;
-        System.out.println("Среднее арифметические чётных чисел заданного диапазона: " + avgeven);
+        double avgeven = (double) sumeven / numeven;
         System.out.println("Среднее арифметическое всех чисел заданного диапазона: " + avg);
-        System.out.println(sum);
+        System.out.println("Среднее арифметические чётных чисел заданного диапазона: " + avgeven);
     }
 }
