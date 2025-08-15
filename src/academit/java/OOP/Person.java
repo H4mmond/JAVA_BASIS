@@ -79,8 +79,6 @@ public class Person {
 
     public int getYearOfBirth() {
         LocalDate date = LocalDate.now();
-//        int yearbirth = date.getYear() - age;
-//        return yearbirth;
         return date.getYear() - age;
     }
 
